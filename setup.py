@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="autoblock",
-    version="1.2.0",
+    version="1.3.0",
     packages=find_packages(include=["autoblock", "autoblock.*"]),  # Ensure `autoblock` package detected
     description="Auto password changer for Django projects",
     long_description=long_description,
